@@ -67,6 +67,7 @@ mspWebsiteBtn.addEventListener('click', function (e) {
 clearLogoBtn.addEventListener('click', function (e) {
   e.preventDefault();
 });
+
 clearCompanyBtn.addEventListener('click', function (e) {
   e.preventDefault();
   brandedName.innerHTML = 'Zorus';
