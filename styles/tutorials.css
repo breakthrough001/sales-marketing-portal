@@ -116,7 +116,8 @@ input[type="file"] {
 }
 
 .col-3,
-.col-8 {
+.col-8,
+.col-12 {
     margin-left: 16px;
     margin-right: 16px;
 }
@@ -309,4 +310,14 @@ input {
     line-height: 1.7;
     margin: 8px 0 16px;
     padding-left: 8px;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

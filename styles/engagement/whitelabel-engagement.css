@@ -122,27 +122,46 @@ input[type="file"] {
 }
 
 .feature__img {
-    margin-right: 40px;
     height: 60px;
+    margin-bottom: 8px;
 }
 
 .feature__row {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    width: 99%;
+    width: 100%;
     margin-bottom: 24px;
 }
 
+.feature__row h2 {
+    text-align: center;
+}
+
 .header {
-    background-color: #010617;
-    background-image: url("../img/triangles.svg");
+    background-color: #050d2f;
+    background-image: url("/img/footer.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     font-family: "IBM Plex Mono", monospace;
     padding-top: 32px;
     padding-bottom: 32px;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.main-img {
+    position: relative;
+    top: 8px;
+    left: -50px;
+    width: 100%;
+}
+
+.text-align-center {
+    text-align: center;
 }
 
 /*** PAGE STYLING ****/
@@ -182,10 +201,14 @@ input[type="file"] {
 
 .page__body {
     padding: 0 64px;
-    background-image: url("../img/cut.svg");
+    background-image: url("/img/cut.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.page__body p {
+    color: #3165c7;
 }
 
 .page-box {
@@ -208,8 +231,8 @@ input[type="file"] {
 }
 
 .page__footer {
-    background-color: #010617;
-    background-image: url("../img/hero-grid.svg");
+    background-color: #050d2f;
+    background-image: url("/img/hero-grid.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -249,6 +272,10 @@ input[type="file"] {
 
 .row {
     height: 100%;
+}
+
+span i {
+    margin-right: 6px;
 }
 
 /********* TOP NAV *******/
@@ -309,4 +336,8 @@ input {
     line-height: 1.7;
     margin: 8px 0 16px;
     padding-left: 8px;
+}
+
+.col-6 {
+    width: 50%;
 }
