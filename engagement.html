@@ -1,311 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
-        <link rel="stylesheet" href="styles/whitelabel__print.css" />
-        <link rel="stylesheet" href="styles/whitelabel__main-header.css" />
-        <link
-            rel="stylesheet"
-            href="/styles//engagement/whitelabel-engagement.css"
-        />
-        <link rel="stylesheet" href="styles/sidebarnav.css" />
-        <link rel="stylesheet" href="styles/footer.css" />
-        <script
-            src="https://kit.fontawesome.com/0e01b28cf6.js"
-            crossorigin="anonymous"
-        ></script>
-        <title>Engagement</title>
-    </head>
-    <body>
-        <div class="main-header">
-            <div class="logo-left">
-                <img class="logo" src="/img/logo--zorus--dark.svg" alt="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="styles/whitelabel__print.css" />
+    <link rel="stylesheet" href="styles/whitelabel__main-header.css" />
+    <link
+      rel="stylesheet"
+      href="/styles//engagement/whitelabel-engagement.css"
+    />
+    <link rel="stylesheet" href="styles/sidebarnav.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/0e01b28cf6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Engagement</title>
+  </head>
+  <body>
+    <div class="main-header">
+      <div class="logo-left">
+        <img class="logo" src="/img/logo--zorus--dark.svg" alt="" />
+      </div>
+      <div class="profile-info">
+        <img src="/img/profile-icon.png" alt="" class="profile-icon" />
+        <p>Sales Portal</p>
+      </div>
+    </div>
+    <div class="sidebar">
+      <header>Portal Dashboard</header>
+      <ul>
+        <li><a href="index.html">Filtering</a></li>
+        <li><a href="engagement.html">Engagement</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+      </ul>
+    </div>
+
+    <div class="content-wrapper">
+      <section class="form-section col-3">
+        <form action="" class="form-box">
+          <h6>Custom Header Logo</h6>
+          <div class="form-description">
+            <div class="logo-placeholder">
+              <img
+                id="output"
+                class="custom-logo logo1"
+                src="img/logo--zorus--dark.svg"
+                alt=""
+              />
             </div>
-            <div class="profile-info">
-                <img src="/img/profile-icon.png" alt="" class="profile-icon" />
-                <p>Sales Portal</p>
+            <p>
+              Must be a JPEG, PNG or SVG image. The image will be resized
+              proportionally to maximum dimensions of 250x250
+            </p>
+          </div>
+          <button id="clear-logo" class="clear">Clear</button>
+          <label for="file" class="custom-file-upload">Set Custom Logo </label>
+
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="file"
+            onchange="loadFile(event)"
+            style="display: none"
+            accept="image/png, image/jpeg, image/svg"
+          />
+        </form>
+
+        <!-- MSP Company Name Form -->
+        <form action="" class="form-box">
+          <h6>Customize Company name</h6>
+          <div class="form-description">
+            <label for="msp-company">Enter company name:</label>
+            <input id="msp-company-name" type="text" placeholder="Zorus" />
+          </div>
+          <button id="clear-company" class="clear">Clear</button>
+          <button id="msp-company-name__btn" class="submit">
+            Set Company Name
+          </button>
+        </form>
+
+        <!-- MSP Contact Info Form -->
+        <form action="" class="form-box">
+          <h6>Customize contact info</h6>
+          <div class="form-description">
+            <label for="msp-phone-info">Enter phone number:</label>
+            <input id="msp-phone-info" type="text" placeholder="203-222-3344" />
+            <label for="msp-email-info">Enter email:</label>
+            <input
+              id="msp-email-info"
+              type="text"
+              placeholder="info@mspwebsite.com"
+            />
+          </div>
+          <button id="clear-contact" class="clear">Clear</button>
+          <button id="msp-contact-info__btn" class="submit">
+            Set Contact Info
+          </button>
+        </form>
+
+        <!-- MSP Website Form -->
+        <form action="" class="form-box">
+          <h6>Customize Company website</h6>
+          <div class="form-description">
+            <label for="msp-website">Enter website info:</label>
+            <input id="msp-website" type="text" placeholder="zorustech.com" />
+          </div>
+          <button id="clear-website" class="clear">Clear</button>
+          <button id="msp-website__btn" class="submit">Set Website</button>
+        </form>
+      </section>
+
+      <!-- PDF -->
+      <div class="col-8">
+        <div class="page-box">
+          <div class="page-box-header">
+            <h1>Preview</h1>
+            <button id="download-pdf-btn" class="secondary-btn">
+              Download PDF
+            </button>
+          </div>
+          <div class="page">
+            <div class="header">
+              <div class="page__logo">
+                <img
+                  id="output"
+                  src="img/logo--zorus--white.svg"
+                  alt=""
+                  accept="image/*"
+                  name="image"
+                  id="file"
+                  onchange="loadFile(event)"
+                  class="logo2"
+                />
+              </div>
+              <div class="page__header">
+                <h1>
+                  <span id="update-company-name">Zorus</span>
+                  Engagement
+                </h1>
+                <h2>
+                  Monitor Remote Employees' Web and<br />Desktop Application
+                  Usage
+                </h2>
+                <p>
+                  Monitor web and desktop application use across all your
+                  company's computers – whether<br />in-office or remote.
+                  Balanced to provide insights without extensive policy
+                  documentation,<br />Engagement is a smart fit if you want
+                  visibility without heavy-handed intrusion.
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="sidebar">
-            <header>Portal Dashboard</header>
-            <ul>
-                <li><a href="index.html">Filtering</a></li>
-                <li><a href="engagement.html">Engagement</a></li>
-                <li><a href="tutorials.html">Tutorials</a></li>
-            </ul>
-        </div>
-
-        <div class="content-wrapper">
-            <section class="form-section col-3">
-                <form action="" class="form-box">
-                    <h6>Custom Header Logo</h6>
-                    <div class="form-description">
-                        <div class="logo-placeholder">
-                            <img
-                                id="output"
-                                class="custom-logo logo1"
-                                src="img/logo--zorus--dark.svg"
-                                alt=""
-                            />
-                        </div>
-                        <p>
-                            Must be a JPEG, PNG or GIF image under 200KB. The
-                            image will be resized proportionally to maximum
-                            dimensions of 250x250
-                        </p>
-                    </div>
-                    <button id="clear-logo" class="clear">Clear</button>
-                    <label for="file" class="custom-file-upload"
-                        >Set Custom Logo
-                    </label>
-
-                    <input
-                        type="file"
-                        accept="image/*"
-                        name="image"
-                        id="file"
-                        onchange="loadFile(event)"
-                        style="display: none"
-                    />
-                </form>
-
-                <!-- MSP Company Name Form -->
-                <form action="" class="form-box">
-                    <h6>Customize Company name</h6>
-                    <div class="form-description">
-                        <label for="msp-company">Enter company name:</label>
-                        <input
-                            id="msp-company-name"
-                            type="text"
-                            placeholder="Zorus"
-                        />
-                    </div>
-                    <button id="clear-company" class="clear">Clear</button>
-                    <button id="msp-company-name__btn" class="submit">
-                        Set Company Name
-                    </button>
-                </form>
-
-                <!-- MSP Contact Info Form -->
-                <form action="" class="form-box">
-                    <h6>Customize contact info</h6>
-                    <div class="form-description">
-                        <label for="msp-phone-info">Enter phone number:</label>
-                        <input
-                            id="msp-phone-info"
-                            type="text"
-                            placeholder="203-222-3344"
-                        />
-                        <label for="msp-email-info">Enter email:</label>
-                        <input
-                            id="msp-email-info"
-                            type="text"
-                            placeholder="info@mspwebsite.com"
-                        />
-                    </div>
-                    <button id="clear-contact" class="clear">Clear</button>
-                    <button id="msp-contact-info__btn" class="submit">
-                        Set Contact Info
-                    </button>
-                </form>
-
-                <!-- MSP Website Form -->
-                <form action="" class="form-box">
-                    <h6>Customize Company website</h6>
-                    <div class="form-description">
-                        <label for="msp-website">Enter website info:</label>
-                        <input
-                            id="msp-website"
-                            type="text"
-                            placeholder="zorustech.com"
-                        />
-                    </div>
-                    <button id="clear-website" class="clear">Clear</button>
-                    <button id="msp-website__btn" class="submit">
-                        Set Website
-                    </button>
-                </form>
-            </section>
-
-            <!-- PDF -->
-            <div class="col-8">
-                <div class="page-box">
-                    <div class="page-box-header">
-                        <h1>Preview</h1>
-                        <button id="download-pdf-btn" class="secondary-btn">
-                            Download PDF
-                        </button>
-                    </div>
-                    <div class="page">
-                        <div class="header">
-                            <div class="page__logo">
-                                <img
-                                    id="output"
-                                    src="img/logo--zorus--white.svg"
-                                    alt=""
-                                    accept="image/*"
-                                    name="image"
-                                    id="file"
-                                    onchange="loadFile(event)"
-                                    class="logo2"
-                                />
-                            </div>
-                            <div class="page__header">
-                                <h1>
-                                    <span id="update-company-name">Zorus</span>
-                                    Engagement
-                                </h1>
-                                <h2>
-                                    Monitor Remote Employees' Web and<br />Desktop
-                                    Application Usage
-                                </h2>
-                                <p>
-                                    <span>
-                                        <i class="fa-solid fa-check"></i
-                                    ></span>
-                                    Monitor web and desktop application use
-                                    across all your company's computers –
-                                    whether<br />in-office or remote. Balanced
-                                    to provide insights without extensive policy
-                                    documentation,<br />Engagement is a smart
-                                    fit if you want visibility without
-                                    heavy-handed intrusion.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="page__body">
-                            <h2>
-                                Respectful and non-intrusive visibility<br />into
-                                your workforce engagement
-                            </h2>
-                            <div class="page__features">
-                                <div
-                                    class="feature__row justify-content-space-between text-align-center"
-                                >
-                                    <div>
-                                        <img
-                                            class="feature__img"
-                                            src="/img/pc-1.svg"
-                                            alt=""
-                                        />
-                                        <p>
-                                            Monitor active tabs, idle<br />time,
-                                            and even desktop apps
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <img
-                                            class="feature__img"
-                                            src="/img/pc-2.svg"
-                                            alt=""
-                                        />
-                                        <p>
-                                            Monitor active tabs, idle<br />time,
-                                            and even desktop apps
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <img
-                                            class="feature__img"
-                                            src="/img/pc-3.svg"
-                                            alt=""
-                                        />
-                                        <p>
-                                            Monitor active tabs, idle<br />time,
-                                            and even desktop apps
-                                        </p>
-                                    </div>
-                                </div>
-                                <h2 class="text-align-center">
-                                    With Engagement you can:
-                                </h2>
-
-                                <div class="feature__row align-items-center">
-                                    <div class="col-6">
-                                        <img
-                                            class="main-img"
-                                            src="img/engagement-frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col-6">
-                                        <p>
-                                            <span
-                                                ><i
-                                                    class="fa-solid fa-check"
-                                                ></i
-                                            ></span>
-                                            Monitor all employee desktop apps
-                                            and web use<br />whether in-office
-                                            or remote
-                                        </p>
-                                        <br />
-                                        <p>
-                                            <span
-                                                ><i
-                                                    class="fa-solid fa-check"
-                                                ></i></span
-                                            >Visibility Into workforce
-                                            productivity without the<br />hassle
-                                            of looking over each employee’s
-                                            shoulder
-                                        </p>
-                                        <br />
-                                        <p>
-                                            <span
-                                                ><i
-                                                    class="fa-solid fa-check"
-                                                ></i></span
-                                            >Track back to events like malware
-                                            injections using<br />the timeline
-                                        </p>
-                                        <br />
-                                        <p>
-                                            <span
-                                                ><i
-                                                    class="fa-solid fa-check"
-                                                ></i></span
-                                            >Monitor activity and view robust
-                                            reports to identify<br />productivity
-                                            trends and optimize workflow<br />
-                                            Determine which web-based
-                                            applications are<br />providing the
-                                            most business value
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="page__footer">
-                            <h3>
-                                Get Engagement By
-                                <span id="update-company-name">Zorus</span>
-                            </h3>
-                            <p id="contact-info-content">
-                                Contact us at
-                                <span id="update-phone-info">203-222-3344</span>
-                                or
-                                <span id="update-email-info"
-                                    >info@mspwebsite.com</span
-                                >
-                            </p>
-                            <p>
-                                You can also learn more at
-                                <span id="update-website">mspwebsite.com</span>
-                            </p>
-                        </div>
-                    </div>
+            <div class="page__body">
+              <h2>
+                Respectful and non-intrusive visibility<br />into your workforce
+                engagement
+              </h2>
+              <div class="page__features">
+                <div
+                  class="feature__row justify-content-space-between text-align-center"
+                >
+                  <div>
+                    <img class="feature__img" src="/img/pc-1.svg" alt="" />
+                    <p>
+                      Monitor active tabs, idle<br />time, and even desktop apps
+                    </p>
+                  </div>
+                  <div>
+                    <img class="feature__img" src="/img/pc-2.svg" alt="" />
+                    <p>
+                      Monitor active tabs, idle<br />time, and even desktop apps
+                    </p>
+                  </div>
+                  <div>
+                    <img class="feature__img" src="/img/pc-3.svg" alt="" />
+                    <p>
+                      Monitor active tabs, idle<br />time, and even desktop apps
+                    </p>
+                  </div>
                 </div>
+                <h2 class="text-align-center">With Engagement you can:</h2>
+
+                <div class="feature__row align-items-center">
+                  <div class="col-6">
+                    <img
+                      class="main-img"
+                      src="img/engagement-frame.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <p>
+                      <span><i class="fa-solid fa-check"></i></span>
+                      Monitor all employee desktop apps and web use<br />whether
+                      in-office or remote
+                    </p>
+                    <br />
+                    <p>
+                      <span><i class="fa-solid fa-check"></i></span>Visibility
+                      Into workforce productivity without the<br />hassle of
+                      looking over each employee’s shoulder
+                    </p>
+                    <br />
+                    <p>
+                      <span><i class="fa-solid fa-check"></i></span>Track back
+                      to events like malware injections using<br />the timeline
+                    </p>
+                    <br />
+                    <p>
+                      <span><i class="fa-solid fa-check"></i></span>Monitor
+                      activity and view robust reports to identify<br />productivity
+                      trends and optimize workflow<br />
+                      Determine which web-based applications are<br />providing
+                      the most business value
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="page__footer">
+              <h3>
+                Get Engagement By
+                <span id="update-company-name">Zorus</span>
+              </h3>
+              <p id="contact-info-content">
+                Contact us at
+                <span id="update-phone-info">203-222-3344</span>
+                or
+                <span id="update-email-info">info@mspwebsite.com</span>
+              </p>
+              <p>
+                You can also learn more at
+                <span id="update-website">mspwebsite.com</span>
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <footer>
-            <p>Copyright 2022</p>
-        </footer>
+    <footer>
+      <p>Copyright 2022</p>
+    </footer>
 
-        <script src="app.js"></script>
-    </body>
+    <script src="app.js"></script>
+  </body>
 </html>
