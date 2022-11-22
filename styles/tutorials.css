@@ -22,12 +22,12 @@ h6 {
 }
 
 p {
-    margin: 0;
+    margin-bottom: 16px;
     font-size: 14px;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 400;
 }
 
@@ -36,8 +36,14 @@ h4 {
     font-family: "IBM Plex Mono", monospace;
 }
 
+h1,
+h2,
 p {
-    font-size: 14px;
+    line-height: 160%;
+}
+
+h2 {
+    margin-bottom: 16px;
 }
 
 /**** BUTTONS *****/
@@ -305,6 +311,10 @@ input[type="file"] {
     margin-bottom: 12px;
 }
 
+.form-section {
+    width: 1000px;
+}
+
 input {
     font-size: 16px;
     line-height: 1.7;
@@ -312,6 +322,9 @@ input {
     padding-left: 8px;
 }
 
+.col-10 {
+    width: 83%;
+}
 .col-12 {
     width: 100%;
 }
@@ -320,4 +333,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.mx-auto {
+    margin: 0 auto;
 }
