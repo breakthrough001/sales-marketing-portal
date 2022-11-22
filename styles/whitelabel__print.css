@@ -1,0 +1,46 @@
+@media print {
+    html,
+    body,
+    .content-wrapper,
+    .page-box,
+    .col-8 {
+        width: 8.5in !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .box-title {
+        display: none;
+    }
+
+    /* .col-8 {
+        width: 100% !important;
+        height: 100% !important;
+    } */
+
+    .header {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+
+    .form-section {
+        display: none;
+    }
+
+    .main-header {
+        display: none !important;
+    }
+
+    .page-box-header {
+        display: none !important;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}

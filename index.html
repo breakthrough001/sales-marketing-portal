@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+        <link rel="stylesheet" href="styles/whitelabel__print.css" />
+        <link rel="stylesheet" href="styles/whitelabel__main-header.css" />
+        <link rel="stylesheet" href="styles/whitelabel.css" />
+        <link rel="stylesheet" href="styles/sidebarnav.css" />
+        <link rel="stylesheet" href="styles/footer.css" />
+        <title>Zorus | Partner Resources | Whitelabeling</title>
+    </head>
+    <body>
+        <div class="main-header">
+            <div class="logo-left">
+                <img class="logo" src="img/logo--zorus--dark.svg" alt="" />
+            </div>
+            <div class="profile-info">
+                <img src="/img/profile-icon.png" alt="" class="profile-icon" />
+                <p>Ryan Caldwell</p>
+            </div>
+        </div>
+        <div class="sidebar">
+            <header>Portal Dashboard</header>
+            <ul>
+                <li><a href="#">Global Overview</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Unblock Requests</a></li>
+                <li><a href="#">Policies</a></li>
+                <li><a href="#">Engagement</a></li>
+                <li><a href="#">Reporting</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Notifications</a></li>
+            </ul>
+            <header>Settings</header>
+            <ul>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Whitelabeling</a></li>
+                <li><a href="#">Alerts</a></li>
+                <li><a href="#">Integration</a></li>
+            </ul>
+            <header>Resources</header>
+            <ul>
+                <li><a href="#">Download Center</a></li>
+                <li><a href="#">URL Lookup</a></li>
+                <li><a href="#">Knowledge Base</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+            <section class="form-section col-3">
+                <form action="" class="form-box">
+                    <h6>Custom Header Logo</h6>
+                    <div class="form-description">
+                        <div class="logo-placeholder">
+                            <img
+                                id="output"
+                                class="custom-logo logo1"
+                                src="img/logo--zorus--dark.svg"
+                                alt=""
+                            />
+                        </div>
+                        <p>
+                            Must be a JPEG, PNG or GIF image under 200KB. The
+                            image will be resized proportionally to maximum
+                            dimensions of 250x250
+                        </p>
+                    </div>
+                    <button id="clear-logo" class="clear">Clear</button>
+                    <label for="file" class="custom-file-upload"
+                        >Set Custom Logo
+                    </label>
+
+                    <input
+                        type="file"
+                        accept="image/*"
+                        name="image"
+                        id="file"
+                        onchange="loadFile(event)"
+                        style="display: none"
+                    />
+                </form>
+
+                <!-- MSP Company Name Form -->
+                <form action="" class="form-box">
+                    <h6>Customize Company name</h6>
+                    <div class="form-description">
+                        <label for="msp-company">Enter company name:</label>
+                        <input
+                            id="msp-company-name"
+                            type="text"
+                            placeholder="Zorus"
+                        />
+                    </div>
+                    <button id="clear-company" class="clear">Clear</button>
+                    <button id="msp-company-name__btn" class="submit">
+                        Set Company Name
+                    </button>
+                </form>
+
+                <!-- MSP Contact Info Form -->
+                <form action="" class="form-box">
+                    <h6>Customize contact info</h6>
+                    <div class="form-description">
+                        <label for="msp-phone-info">Enter phone number:</label>
+                        <input
+                            id="msp-phone-info"
+                            type="text"
+                            placeholder="203-222-3344"
+                        />
+                        <label for="msp-email-info">Enter email:</label>
+                        <input
+                            id="msp-email-info"
+                            type="text"
+                            placeholder="info@mspwebsite.com"
+                        />
+                    </div>
+                    <button id="clear-contact" class="clear">Clear</button>
+                    <button id="msp-contact-info__btn" class="submit">
+                        Set Contact Info
+                    </button>
+                </form>
+
+                <!-- MSP Website Form -->
+                <form action="" class="form-box">
+                    <h6>Customize Company website</h6>
+                    <div class="form-description">
+                        <label for="msp-website">Enter website info:</label>
+                        <input
+                            id="msp-website"
+                            type="text"
+                            placeholder="zorustech.com"
+                        />
+                    </div>
+                    <button id="clear-website" class="clear">Clear</button>
+                    <button id="msp-website__btn" class="submit">
+                        Set Website
+                    </button>
+                </form>
+            </section>
+
+            <!-- PDF -->
+            <div class="col-8">
+                <div class="page-box">
+                    <div class="page-box-header">
+                        <h1>Preview</h1>
+                        <button id="download-pdf-btn" class="secondary-btn">
+                            Download PDF
+                        </button>
+                    </div>
+                    <div class="page">
+                        <div class="header">
+                            <div class="page__logo">
+                                <img
+                                    id="output"
+                                    src="/img/logo--zorus--white.svg"
+                                    alt=""
+                                    accept="image/*"
+                                    name="image"
+                                    id="file"
+                                    onchange="loadFile(event)"
+                                    class="logo2"
+                                />
+                            </div>
+                            <div class="page__header">
+                                <h1>
+                                    <span id="update-company-name">Zorus</span>
+                                    Filtering
+                                </h1>
+                                <h2>
+                                    Complete Web Filtering Protection<br />for
+                                    Small to Medium Businesses
+                                </h2>
+                                <p>
+                                    Traditional UTM systems only protect devices
+                                    inside their networks.
+                                    <span id="update-company-name">Zorus</span>
+                                    Filtering protection<br />travels with the
+                                    device protecting your staff everywhere
+                                    they’re working. Safeguard your<br />business
+                                    with faster, more secure technology.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="page__body">
+                            <h2>
+                                Five ways
+                                <span id="update-company-name">Zorus</span>
+                                Filtering outperforms<br />other web filtering
+                                security
+                            </h2>
+                            <div class="page__features">
+                                <div class="feature__row">
+                                    <div>
+                                        <img
+                                            class="feature__img"
+                                            src="img/icon--filtering.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4>Device-Level Web Filtering</h4>
+                                        <p>
+                                            <span id="update-company-name"
+                                                >Zorus</span
+                                            >
+                                            filters traffic through device-level
+                                            DNS filtering so your business
+                                            remains<br />safe and protected in
+                                            today's world.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="feature__row">
+                                    <div>
+                                        <img
+                                            class="feature__img"
+                                            src="img/icon--endpoint-protection.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4>Total Endpoint Protection</h4>
+                                        <p>
+                                            Traditional UTM systems only protect
+                                            devices inside their networks,
+                                            leaving employees outside the
+                                            perimeter exposed.
+                                            <span id="update-company-name"
+                                                >Zorus</span
+                                            >
+                                            Filtering protection travels with
+                                            the device.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="feature__row">
+                                    <div>
+                                        <img
+                                            class="feature__img"
+                                            src="img/icon--cloud-management.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4>Cloud Based Management</h4>
+                                        <p>
+                                            Centrally managed and deployed with
+                                            a single click,
+                                            <span id="update-company-name"
+                                                >Zorus</span
+                                            >
+                                            Filtering eliminates the need to
+                                            maintain costly hardware. Updates
+                                            are sent to all protected devices
+                                            regardless of their location
+                                            eliminating the need to VPN back
+                                            into the security perimeter for
+                                            protection.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="feature__row">
+                                    <div>
+                                        <img
+                                            id="msp-logo"
+                                            class="feature__img"
+                                            src="img/icon--ai.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4>Machine Learning Optimization</h4>
+                                        <p>
+                                            Capable of learning from each new
+                                            deployment and scanned site,
+                                            Filtering self optimizes.
+                                            Discoveries are then shared to
+                                            ensure the entire
+                                            Filtering-protected community of
+                                            networks benefit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="feature__row">
+                                    <div>
+                                        <img
+                                            class="feature__img"
+                                            src="img/icon--identify.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4>Better Security Visibility</h4>
+                                        <p>
+                                            Through its intuitive dashboard and
+                                            detailed reporting,
+                                            <span id="update-company-name"
+                                                >Zorus</span
+                                            >
+                                            Filtering can provide levels of
+                                            visibility other systems can’t.
+                                            Monitor logs, track activity, see
+                                            who did what, when and where.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page__footer">
+                            <h3>
+                                Get Filtering By
+                                <span id="update-company-name">Zorus</span>
+                            </h3>
+                            <p id="contact-info-content">
+                                Contact us at
+                                <span id="update-phone-info">203-222-3344</span>
+                                or
+                                <span id="update-email-info"
+                                    >info@mspwebsite.com</span
+                                >
+                            </p>
+                            <p>
+                                You can also learn more at
+                                <span id="update-website">mspwebsite.com</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright 2022</p>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>

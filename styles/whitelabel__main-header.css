@@ -1,0 +1,10 @@
+.main-header {
+    background-color: #ffffff;
+    max-height: 50px;
+    padding: 4px 20px;
+}
+
+.logo-left,
+.logo {
+    height: 42px;
+}
