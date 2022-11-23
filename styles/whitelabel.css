@@ -180,6 +180,11 @@ input[type="file"] {
     margin-bottom: 24px;
 }
 
+.page__body h2,
+.page__body h4 {
+    color: #041342;
+}
+
 .page__body {
     padding: 0 64px;
     background-image: url("../img/cut.svg");
